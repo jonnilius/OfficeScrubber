@@ -1,127 +1,119 @@
 # Office Scrubber
 
-* Ein automatisiertes Skript zum Deinstallieren, Entfernen und Bereinigen von Microsoft
-  Office (MSI oder Click-to-Run)
+Ein automatisiertes Skript zum vollständigen Entfernen, Deinstallieren und Bereinigen von Microsoft Office (MSI und Click‑to‑Run).
 
-* Führt hauptsächlich OffScrub-VBS-Skripte aus, die aus dem SaRA-Tool 
-  (Microsoft Support and Recovery Assistant) stammen
+Das Skript nutzt hauptsächlich die OffScrub‑VBS‑Module aus dem SaRA‑Tool (Microsoft Support and Recovery Assistant). Es unterstützt Office 2003 und neuer unter Windows XP oder neuer.
 
-* Unterstützt das Bereinigen von Office 2003 und neuer unter Windows XP oder neuer
+Da moderne Office‑Versionen (2024, 2021, 2019, 2016, 365) denselben Installationspfad und dieselbe Lizenzierungsstruktur verwenden, kann es zu Konflikten oder doppelten Lizenzeinträgen kommen. Zusätzlich bleiben bei Office 2013 und neuer unter Windows 8 oder neuer Lizenzreste im SPP‑Token‑Speicher erhalten.
 
-* Office (2024, 2021, 2019, 2016, 365) verwendet denselben Installationspfad und dieselbe 
-  Lizenzierungsstruktur, was zu Lizenzkonflikten oder Duplikaten führen kann
+---
 
-Zusätzlich bleiben beim Deinstallieren von Office 2013+ unter Windows 8 oder neuer die 
-Lizenzen im SPP-Token-Speicher des Systems zurück
+## Scrub ALL – Übersicht
 
-## Übersicht: Scrub ALL
+- Entfernt standardmäßig nur erkannte Office‑Installationen.
+    
+- Unter Windows 7 und neuer werden Office C2R/2016 zusätzlich aktiviert, auch wenn sie nicht erkannt werden.
+    
+- Unter Windows Vista und älter wird Office 2010 zusätzlich aktiviert, unabhängig von der Erkennung.
+    
+- Produktschlüssel und Lizenzreste werden automatisch bereinigt.
+    
 
-* Standardmäßig entfernt dieser Vorgang nur erkannte Versionen
-unter Windows 7 und neuer werden Office C2R/2016 unabhängig von der Erkennung aktiviert
-unter Windows Vista und älter wird Office 2010 unabhängig von der Erkennung aktiviert
-zusätzlich werden Produktschlüssel deinstalliert und Lizenzreste bereinigt
+Du kannst mit den Tasten **2–8** festlegen, ob bestimmte Office‑Versionen erzwungen bereinigt oder übersprungen werden.
 
-* Mit den Zahlen 2–8 kannst du die Statuswerte für die Menüoptionen umschalten
-und erzwingen, dass eine Office-Version bereinigt oder übersprungen wird
+**Empfehlung:** Nur erkannte Office‑Versionen bereinigen. Manuelle Komplettauswahl verlängert den Vorgang erheblich.
 
-* Es wird empfohlen, nur die erkannten Versionen zu bereinigen {*}
-alles manuell auszuwählen ist nicht nötig und dauert sehr lange.
+---
 
-## Übersicht: Hauptoptionen
+## Hauptoptionen
 
-* Scrub ALL
+### Scrub ALL
 
-deinstalliert und entfernt eine oder mehrere Office-Versionen
+Entfernt eine oder mehrere Office‑Versionen (siehe Verhalten oben).
 
-* Scrub Office C2R
+### Scrub Office C2R
 
-deinstalliert und entfernt Office Click-to-Run (365, LTSC, 2024, 2021, 2019, 2016, 2013)
-wird unabhängig davon ausgeführt, ob diese Office-Version erkannt wird oder nicht
+Entfernt Office Click‑to‑Run (365, LTSC, 2024, 2021, 2019, 2016, 2013).  
+Wird immer ausgeführt – auch wenn die Installation nicht erkannt wird.
 
-* Scrub Office 2016
+### Scrub Office 2016 (MSI)
 
-deinstalliert und entfernt die MSI-Version von Office 2016
-wird unabhängig von der Erkennung ausgeführt
+Entfernt die MSI‑Version von Office 2016.  
+Wird unabhängig von der Erkennung ausgeführt.
 
-* Scrub Office 2013
+### Scrub Office 2013 (MSI)
 
-deinstalliert und entfernt die MSI-Version von Office 2013
-wird unabhängig von der Erkennung ausgeführt
+Entfernt die MSI‑Version von Office 2013.  
+Wird unabhängig von der Erkennung ausgeführt.
 
-* Scrub Office 2010
+### Scrub Office 2010 (MSI oder C2R)
 
-deinstalliert und entfernt Office 2010 (MSI oder C2R)
-wird unabhängig von der Erkennung ausgeführt
+Entfernt Office 2010.  
+Wird unabhängig von der Erkennung ausgeführt.
 
-* Scrub Office 2007
+### Scrub Office 2007
 
-deinstalliert und entfernt Office 2007
-wird unabhängig von der Erkennung ausgeführt
+Entfernt Office 2007.  
+Wird unabhängig von der Erkennung ausgeführt.
 
-* Scrub Office 2003
+### Scrub Office 2003
 
-deinstalliert und entfernt Office 2003
-wird unabhängig von der Erkennung ausgeführt
+Entfernt Office 2003.  
+Wird unabhängig von der Erkennung ausgeführt.
 
-* Scrub Office UWP
+### Scrub Office UWP
 
-deinstalliert und entfernt Office-Store-Apps unter Windows 11/10
-wird unabhängig von der Erkennung ausgeführt
+Entfernt Office‑Store‑Apps unter Windows 10 und 11.  
+Wird unabhängig von der Erkennung ausgeführt.
 
-## Übersicht: Zusatzoptionen
+---
 
-* Clean vNext Licenses
+## Zusatzoptionen
 
-entfernt Office-vNext-Lizenzen (Abo oder Lifetime), Tokens und zwischengespeicherte Identitäten
+### Clean vNext Licenses
 
-* Remove all Licenses
+Entfernt Office‑vNext‑Lizenzen (Abo und Lifetime), Token‑Daten und gespeicherte Identitäten.
 
-entfernt Lizenzen für Office 2013 und neuer (bei Konflikten)
-du kannst danach Office reparieren, um die ursprünglichen Lizenzen wiederherzustellen,
-oder C2R-R2V verwenden, um Office-C2R-Lizenzen zu installieren
+### Remove all Licenses
 
-* Reset C2R Licenses
+Entfernt alle Office‑Lizenzen für Office 2013 und neuer (nützlich bei Lizenzkonflikten).
 
-entfernt Lizenzen für Office 2016 und neuer und installiert dann die ursprünglichen Office-C2R-Lizenzen neu
-du kannst das verwenden, wenn die Office-Reparatur die Original-Lizenzen nicht wiederherstellen konnte
-oder um C2R-R2V-Volumenlizenzen zu entfernen und wieder Retail-Lizenzen zu aktivieren
+- Danach kannst du Office reparieren, um die Original‑Lizenzen wiederherzustellen.
+    
+- Alternativ kannst du C2R‑R2V verwenden, um passende C2R‑Lizenzen zu installieren.
+    
 
-* Uninstall all Keys
+### Reset C2R Licenses
 
-deinstalliert Produktschlüssel für Office 2013 und neuer (bei Konflikten)
+Entfernt Office‑Lizenzen für Office 2016 und neuer und installiert anschließend die Original‑C2R‑Lizenzen neu.  
+Ideal, wenn eine Office‑Reparatur die ursprünglichen Lizenzen nicht wiederherstellen konnte, oder um R2V‑Volumenlizenzen zurück auf Retail zu setzen.
 
-## Unattended-Kommandozeilenparameter
+### Uninstall all Keys
 
-/P  
-Scrub Office UWP
+Entfernt Produktschlüssel für Office 2013 und neuer (z. B. bei Key‑Konflikten).
 
-/C  
-Scrub Office C2R
+---
 
-/M6  
-Scrub Office 2016 MSI
+## Unattended‑Parameter für die Kommandozeile
 
-/M5  
-Scrub Office 2013 MSI
+|Parameter|Aktion|
+|---|---|
+|`/P`|Scrub Office UWP|
+|`/C`|Scrub Office C2R|
+|`/M6`|Scrub Office 2016 (MSI)|
+|`/M5`|Scrub Office 2013 (MSI)|
+|`/M4`|Scrub Office 2010|
+|`/M2`|Scrub Office 2007|
+|`/M1`|Scrub Office 2003|
+|`/A`|Scrub ALL|
 
-/M4  
-Scrub Office 2010
+### Hinweis
 
-/M2  
-Scrub Office 2007
+Der Parameter **/A** entfernt nur erkannte und die standardmäßigen Zusatzversionen.  
+Um weitere Versionen unabhängig von der Erkennung zu bereinigen, gib deren Parameter zusätzlich an.
 
-/M1  
-Scrub Office 2003
+**Beispiel:** Bereinigt erkannte Versionen, die Standardversionen sowie explizit Office 2013 und 2003:
 
-/A  
-Scrub ALL
-
-* Hinweis:
-
-Der Scrub-ALL-Parameter entfernt nur erkannte Versionen und die Standardversionen (wie oben beschrieben).
-Um weitere oder andere Versionen unabhängig von der Erkennung zu erzwingen, gib ihre Parameter zusätzlich an.
-
-Beispiel: Dies bereinigt erkannte und Standardversionen sowie Office 2013 und 2003:
-
+```
 OfficeScrubber.cmd /A /M2 /M5
-
+```
