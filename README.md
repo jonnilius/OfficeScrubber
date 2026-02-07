@@ -2,9 +2,13 @@
 
 Ein automatisiertes Skript zum vollständigen Entfernen, Deinstallieren und Bereinigen von Microsoft Office (MSI und Click‑to‑Run).
 
-Das Skript nutzt hauptsächlich die OffScrub‑VBS‑Module aus dem SaRA‑Tool (Microsoft Support and Recovery Assistant). Es unterstützt Office 2003 und neuer unter Windows XP oder neuer.
+Das Skript nutzt hauptsächlich die OffScrub‑VBS‑Module aus dem SaRA‑Tool (Microsoft Support and Recovery Assistant). 
 
-Da moderne Office‑Versionen (2024, 2021, 2019, 2016, 365) denselben Installationspfad und dieselbe Lizenzierungsstruktur verwenden, kann es zu Konflikten oder doppelten Lizenzeinträgen kommen. Zusätzlich bleiben bei Office 2013 und neuer unter Windows 8 oder neuer Lizenzreste im SPP‑Token‑Speicher erhalten.
+Es unterstützt Office 2003 und neuer, unter Windows XP oder neuer.
+
+Da moderne Office‑Versionen (2024, 2021, 2019, 2016, 365) denselben Installationspfad und dieselbe Lizenzierungsstruktur verwenden, kann es zu Konflikten oder doppelten Lizenzeinträgen kommen. 
+
+Zusätzlich bleiben bei Office 2013 und neuer unter Windows 8 oder neuer Lizenzreste im SPP‑Token‑Speicher erhalten.
 
 ---
 
