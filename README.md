@@ -1,4 +1,4 @@
-# Office Scrubber
+# Office Scrubber v13
 
 Ein automatisiertes Skript zum vollständigen Entfernen, Deinstallieren und Bereinigen von Microsoft Office (MSI und Click‑to‑Run).
 
